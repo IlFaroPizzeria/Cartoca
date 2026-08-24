@@ -597,6 +597,34 @@
     100% { width: 130px; height: 130px; margin: -65px 0 0 -65px; opacity: 0; }
   }
 
+  /* ---------- Sección Nosotros ---------- */
+  .about-section { padding: 88px 0; position: relative; }
+  .about-head { max-width: 640px; margin-bottom: 56px; }
+  .about-chapters {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  }
+  @media (max-width: 860px) { .about-chapters { grid-template-columns: 1fr; } }
+  .about-chapter { background: var(--void); padding: 34px 28px; }
+  .about-chapter .ac-num {
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; color: var(--mist-dim);
+    letter-spacing: 0.1em; margin-bottom: 14px; display: block;
+  }
+  .about-chapter h3 {
+    font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem;
+    margin-bottom: 12px; color: var(--ice);
+  }
+  .about-chapter p { color: var(--mist); font-size: 0.92rem; line-height: 1.65; }
+  .about-signoff {
+    margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .about-signoff .as-quote {
+    font-size: 1rem; color: var(--ice); font-weight: 300; flex: 1; min-width: 260px;
+  }
+  .about-signoff .as-who { font-size: 0.82rem; color: var(--mist); white-space: nowrap; }
+  .about-signoff .as-who b { color: var(--cobalt); font-weight: 700; }
+
   .showcase-light {
     position: relative;
     background: linear-gradient(180deg, #F7F7F5 0%, #EFEFEC 100%);
@@ -719,10 +747,11 @@
 <nav>
   <div class="brand"><span class="dot"></span>Cart<span style="color:var(--mist)">oca</span></div>
   <div class="nav-links">
+    <a href="#nosotros">Nosotros</a>
     <a href="#producto">Producto</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#ejemplo">Ejemplo real</a>
     <a href="#precios">Precios</a>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#faq">FAQ</a>
   </div>
   <a class="btn btn-primary" href="https://wa.me/34644090462" target="_blank" rel="noopener">Hablar por WhatsApp</a>
 </nav>
@@ -776,6 +805,39 @@
     </div>
   </div>
 </div>
+
+<section class="about-section" id="nosotros">
+  <div class="wrap">
+    <div class="about-head">
+      <p class="eyebrow" data-r>Nosotros</p>
+      <h2 class="h-plain" data-r>Por qué existe Cartoca</h2>
+      <p class="lead-plain" data-r>No empezamos con una idea de tecnología. Empezamos viendo el mismo problema una y otra vez, en local tras local.</p>
+    </div>
+
+    <div class="about-chapters" data-r>
+      <div class="about-chapter">
+        <span class="ac-num">01 — El problema</span>
+        <h3>Cartas de papel que ya no sirven</h3>
+        <p>Un cambio de precio significa reimprimir. Un plato agotado significa tacharlo a mano. Un turista sin el idioma significa un cliente que se va confuso. Y casi nadie deja reseña en Google porque buscar el negocio a mano es un esfuerzo que la mayoría no hace.</p>
+      </div>
+      <div class="about-chapter">
+        <span class="ac-num">02 — Cómo lo vimos</span>
+        <h3>Recorriendo locales, uno a uno</h3>
+        <p>Lo descubrimos hablando cara a cara con dueños de bares y restaurantes: el mismo problema, contado con las mismas palabras, en cada barrio. No era un caso aislado — era la norma. Y la mayoría no tenía tiempo ni ganas de lidiar con apps complicadas.</p>
+      </div>
+      <div class="about-chapter">
+        <span class="ac-num">03 — La solución</span>
+        <h3>Un toque, no una app</h3>
+        <p>La tecnología NFC ya existía — la usamos cada día para pagar. La aplicamos a la carta, a las reseñas y al WiFi: un toque del móvil y ya está. Sin descargar nada, sin escribir contraseñas, sin fricción entre el negocio y su cliente.</p>
+      </div>
+    </div>
+
+    <div class="about-signoff" data-r>
+      <p class="as-quote">Monto cada carta yo mismo, de principio a fin. Prefiero atender bien a pocos negocios que mal a muchos — por eso Cartoca sigue siendo un trabajo cercano, no una empresa de call center.</p>
+      <p class="as-who">— <b>Nils</b>, fundador de Cartoca</p>
+    </div>
+  </div>
+</section>
 
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -1125,7 +1187,7 @@
         <div class="calc-row">
           <div class="calc-row-info">
             <p class="calc-row-title">Tarjetas de WiFi</p>
-            <p class="calc-row-desc">15€/ud · <span class="calc-tier-note">12€/ud a partir de 5 unidades</span></p>
+            <p class="calc-row-desc">12€/ud · <span class="calc-tier-note">8€/ud a partir de 5 unidades</span></p>
           </div>
           <div class="calc-stepper" data-field="wifi">
             <button type="button" class="calc-step-btn" data-action="minus">−</button>
